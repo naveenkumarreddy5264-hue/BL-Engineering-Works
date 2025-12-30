@@ -20,6 +20,9 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 import { useParams, Link } from "react-router-dom";
 
+/* ================= BASE URL (IMPORTANT) ================= */
+const BASE = import.meta.env.BASE_URL;
+
 /* ================= WORK DATA ================= */
 
 const workData = {
@@ -27,9 +30,9 @@ const workData = {
     title: "Civil Works",
     subtitle: "Railway Trenching & Foundation Infrastructure",
     images: [
-      "/work-images/civil/civil1.jpg",
-      "/work-images/civil/civil2.jpg",
-      "/work-images/civil/civil3.jpg",
+      `${BASE}work-images/civil/civil1.jpg`,
+      `${BASE}work-images/civil/civil2.jpg`,
+      `${BASE}work-images/civil/civil3.jpg`,
     ],
     items: [
       "Manual & Mechanical Trenching",
@@ -45,9 +48,9 @@ const workData = {
     title: "RCC & Structural Works",
     subtitle: "Foundations, Chambers & Structural Construction",
     images: [
-      "/work-images/rcc/rcc1.jpg",
-      "/work-images/rcc/rcc2.jpg",
-      "/work-images/rcc/rcc3.jpg",
+      `${BASE}work-images/rcc/rcc1.jpg`,
+      `${BASE}work-images/rcc/rcc2.jpg`,
+      `${BASE}work-images/rcc/rcc3.jpg`,
     ],
     items: [
       "RCC chamber construction",
@@ -62,9 +65,9 @@ const workData = {
     title: "S&T Works",
     subtitle: "Signaling, Cabling & OFC Infrastructure",
     images: [
-      "/work-images/st/st1.jpg",
-      "/work-images/st/st2.jpg",
-      "/work-images/st/st3.jpg",
+      `${BASE}work-images/st/st1.jpg`,
+      `${BASE}work-images/st/st2.jpg`,
+      `${BASE}work-images/st/st3.jpg`,
     ],
     items: [
       "Cable & OFC laying",
@@ -79,9 +82,9 @@ const workData = {
     title: "Electrical & Earthing Works",
     subtitle: "Power Distribution & Safety Earthing",
     images: [
-      "/work-images/electrical/electrical1.jpg",
-      "/work-images/electrical/electrical2.jpg",
-      "/work-images/electrical/electrical3.jpg",
+      `${BASE}work-images/electrical/electrical1.jpg`,
+      `${BASE}work-images/electrical/electrical2.jpg`,
+      `${BASE}work-images/electrical/electrical3.jpg`,
     ],
     items: [
       "GI & copper earthing systems",
@@ -145,17 +148,14 @@ function WorkDetails() {
           <Typography variant="h3" fontWeight="bold">
             {data.title}
           </Typography>
-          <Typography
-            color="text.secondary"
-            sx={{ mt: 1, maxWidth: 650 }}
-          >
+          <Typography color="text.secondary" sx={{ mt: 1, maxWidth: 650 }}>
             {data.subtitle}
           </Typography>
         </motion.div>
 
         <Divider sx={{ my: 4 }} />
 
-        {/* ================= IMAGE SLIDER (DECENT SIZE) ================= */}
+        {/* ================= IMAGE SLIDER ================= */}
         <motion.div
           initial={{ opacity: 0, scale: 0.97 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -184,12 +184,10 @@ function WorkDetails() {
               }}
             />
 
-            {/* LEFT */}
             <IconButton onClick={prevImage} sx={sliderBtn("left")}>
               <ArrowBackIosNewIcon />
             </IconButton>
 
-            {/* RIGHT */}
             <IconButton onClick={nextImage} sx={sliderBtn("right")}>
               <ArrowForwardIosIcon />
             </IconButton>
@@ -225,16 +223,10 @@ function WorkDetails() {
           </Box>
         </motion.div>
 
-        {/* ================= SCOPE OF WORK (CARD STYLE) ================= */}
-        <Typography
-            variant="h5"
-            fontWeight="bold"
-            gutterBottom
-            align="center"
-          >
-            Scope of Work
-          </Typography>
-
+        {/* ================= SCOPE OF WORK ================= */}
+        <Typography variant="h5" fontWeight="bold" gutterBottom align="center">
+          Scope of Work
+        </Typography>
 
         <Box
           sx={{

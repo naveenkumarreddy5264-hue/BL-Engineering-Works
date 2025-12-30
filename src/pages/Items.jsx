@@ -112,13 +112,15 @@ function Items() {
           <Grid item xs={12} sm={6} md={3} key={item.id}>
             <Card sx={cardStyle}>
               <CardMedia
-                component="img"
-                height="160"
-                image={item.image}
-                onError={(e) =>
-                  (e.target.src = "/item-images/no-image.png")
-                }
-              />
+  component="img"
+  height="160"
+  image={`${import.meta.env.BASE_URL}${item.image}`}
+  onError={(e) => {
+    e.target.onerror = null;
+    e.target.src = `${import.meta.env.BASE_URL}item-images/no-image.png`;
+  }}
+/>
+
 
               <CardContent>
                 <Typography fontWeight={600} noWrap>

@@ -8,9 +8,11 @@ import { OrderProvider } from "./order/OrderContext";
 import theme from "./theme";
 
 
+import { HashRouter } from "react-router-dom";
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <AuthProvider>
         <OrderProvider>
           <CartProvider>
@@ -18,6 +20,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           </CartProvider>
         </OrderProvider>
       </AuthProvider>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 );
+

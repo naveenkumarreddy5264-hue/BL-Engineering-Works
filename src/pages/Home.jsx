@@ -19,14 +19,15 @@ function Home() {
     <>
       {/* ================= HERO SECTION ================= */}
       <Box
-        sx={{
-          position: "relative",
-          height: { xs: "70vh", md: "80vh" },
-          backgroundImage: "url('/work-images/hero.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
+  sx={{
+    position: "relative",
+    height: { xs: "70vh", md: "80vh" },
+    backgroundImage: `url(${import.meta.env.BASE_URL}work-images/hero.jpg)`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  }}
+>
+
         <Box
           sx={{
             position: "absolute",
@@ -118,26 +119,25 @@ function Home() {
                   whiteSpace: "nowrap",
                 }}
               >
-                {[
-                  "/work-images/civil/civil1.jpg",
-                  "/work-images/rcc/rcc1.jpg",
-                  "/work-images/st/st1.jpg",
-                  "/work-images/electrical/electrical1.jpg",
-                  "/work-images/civil/civil2.jpg",
-                  "/work-images/rcc/rcc2.jpg",
-                  "/work-images/st/st2.jpg",
-                  "/work-images/electrical/electrical2.jpg",
-                ]
-                  .concat([
-                    "/work-images/civil/civil1.jpg",
-                    "/work-images/rcc/rcc1.jpg",
-                    "/work-images/st/st1.jpg",
-                    "/work-images/electrical/electrical1.jpg",
-                    "/work-images/civil/civil2.jpg",
-                    "/work-images/rcc/rcc2.jpg",
-                    "/work-images/st/st2.jpg",
-                    "/work-images/electrical/electrical2.jpg",
-                  ])
+               {[
+  `${import.meta.env.BASE_URL}work-images/civil/civil1.jpg`,
+  `${import.meta.env.BASE_URL}work-images/rcc/rcc1.jpg`,
+  `${import.meta.env.BASE_URL}work-images/st/st1.jpg`,
+  `${import.meta.env.BASE_URL}work-images/electrical/electrical1.jpg`,
+  `${import.meta.env.BASE_URL}work-images/civil/civil2.jpg`,
+  `${import.meta.env.BASE_URL}work-images/rcc/rcc2.jpg`,
+  `${import.meta.env.BASE_URL}work-images/st/st2.jpg`,
+  `${import.meta.env.BASE_URL}work-images/electrical/electrical2.jpg`,
+].concat([
+  `${import.meta.env.BASE_URL}work-images/civil/civil1.jpg`,
+  `${import.meta.env.BASE_URL}work-images/rcc/rcc1.jpg`,
+  `${import.meta.env.BASE_URL}work-images/st/st1.jpg`,
+  `${import.meta.env.BASE_URL}work-images/electrical/electrical1.jpg`,
+  `${import.meta.env.BASE_URL}work-images/civil/civil2.jpg`,
+  `${import.meta.env.BASE_URL}work-images/rcc/rcc2.jpg`,
+  `${import.meta.env.BASE_URL}work-images/st/st2.jpg`,
+  `${import.meta.env.BASE_URL}work-images/electrical/electrical2.jpg`,
+])
                   .map((img, index) => (
                     <Box
                       key={index}
@@ -170,31 +170,31 @@ function Home() {
 
             {/* ================= SERVICE CARDS (UNCHANGED) ================= */}
             <Grid container spacing={4} justifyContent="center">
-              {[
-                {
-                  title: "Civil Works",
-                  img: "/work-images/civil/civil1.jpg",
-                  desc: "Trenching, foundations, RCC trenches & crossings",
-                  path: "/services/civil",
-                },
-                {
-                  title: "RCC & Structural",
-                  img: "/work-images/rcc/rcc1.jpg",
-                  desc: "RCC chambers, coil pits & structural foundations",
-                  path: "/services/rcc",
-                },
-                {
-                  title: "S&T Works",
-                  img: "/work-images/st/st1.jpg",
-                  desc: "OFC laying, cable routing & termination",
-                  path: "/services/st",
-                },
-                {
-                  title: "Electrical & Earthing",
-                  img: "/work-images/electrical/electrical1.jpg",
-                  desc: "GI earthing, electrical installations",
-                  path: "/services/electrical",
-                },
+             {[
+  {
+    title: "Civil Works",
+    img: `${import.meta.env.BASE_URL}work-images/civil/civil1.jpg`,
+    desc: "Trenching, foundations, RCC trenches & crossings",
+    path: "/services/civil",
+  },
+  {
+    title: "RCC & Structural",
+    img: `${import.meta.env.BASE_URL}work-images/rcc/rcc1.jpg`,
+    desc: "RCC chambers, coil pits & structural foundations",
+    path: "/services/rcc",
+  },
+  {
+    title: "S&T Works",
+    img: `${import.meta.env.BASE_URL}work-images/st/st1.jpg`,
+    desc: "OFC laying, cable routing & termination",
+    path: "/services/st",
+  },
+  {
+    title: "Electrical & Earthing",
+    img: `${import.meta.env.BASE_URL}work-images/electrical/electrical1.jpg`,
+    desc: "GI earthing, electrical installations",
+    path: "/services/electrical",
+  },
               ].map((service) => (
                 <Grid item xs={12} sm={6} md={3} key={service.title}>
                   <motion.div whileHover={{ scale: 1.04 }}>
@@ -247,26 +247,27 @@ function Home() {
 
             <Grid container spacing={4} justifyContent="center">
               {[
-                {
-                  title: "Experienced Team",
-                  img: "/why/experience.jpg",
-                  desc: "Skilled manpower with railway project expertise",
-                },
-                {
-                  title: "Quality Standards",
-                  img: "/why/quality.jpg",
-                  desc: "Strict adherence to railway specifications",
-                },
-                {
-                  title: "Timely Delivery",
-                  img: "/why/time.jpg",
-                  desc: "Planned execution & on-time completion",
-                },
-                {
-                  title: "Safety First",
-                  img: "/why/safety.jpg",
-                  desc: "Safety-compliant execution at all sites",
-                },
+  {
+    title: "Experienced Team",
+    img: `${import.meta.env.BASE_URL}why/experience.jpg`,
+    desc: "Skilled manpower with railway project expertise",
+  },
+  {
+    title: "Quality Standards",
+    img: `${import.meta.env.BASE_URL}why/quality.jpg`,
+    desc: "Strict adherence to railway specifications",
+  },
+  {
+    title: "Timely Delivery",
+    img: `${import.meta.env.BASE_URL}why/time.jpg`,
+    desc: "Planned execution & on-time completion",
+  },
+  {
+    title: "Safety First",
+    img: `${import.meta.env.BASE_URL}why/safety.jpg`,
+    desc: "Safety-compliant execution at all sites",
+  },
+
               ].map((item) => (
                 <Grid item xs={6} sm={4} md={3} key={item.title}>
                   <motion.div whileHover={{ y: -6 }}>
@@ -319,10 +320,23 @@ function Home() {
 
             <Grid container spacing={4} justifyContent="center">
               {[
-                { name: "Indian Railways", logo: "/client-logos/indian-railways.png" },
-                { name: "IRCON", logo: "/client-logos/ircon.png" },
-                { name: "RVNL", logo: "/client-logos/rvnl.png" },
-                { name: "L&T", logo: "/client-logos/larsen-toubro.png" },
+  {
+    name: "Indian Railways",
+    logo: `${import.meta.env.BASE_URL}client-logos/indian-railways.png`,
+  },
+  {
+    name: "IRCON",
+    logo: `${import.meta.env.BASE_URL}client-logos/ircon.png`,
+  },
+  {
+    name: "RVNL",
+    logo: `${import.meta.env.BASE_URL}client-logos/rvnl.png`,
+  },
+  {
+    name: "L&T",
+    logo: `${import.meta.env.BASE_URL}client-logos/larsen-toubro.png`,
+  },
+
               ].map((client) => (
                 <Grid item xs={6} sm={4} md={3} key={client.name}>
                   <Box

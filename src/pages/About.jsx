@@ -10,14 +10,16 @@ import { motion } from "framer-motion";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
+const BASE = import.meta.env.BASE_URL;
+
+
 /* ================= IMAGE LIST ================= */
 const images = [
-  "/work-images/civil/civil1.jpg",
-  "/work-images/rcc/rcc1.jpg",
-  "/work-images/st/st1.jpg",
-  "/work-images/electrical/electrical1.jpg",
+  `${BASE}work-images/civil/civil1.jpg`,
+  `${BASE}work-images/rcc/rcc1.jpg`,
+  `${BASE}work-images/st/st1.jpg`,
+  `${BASE}work-images/electrical/electrical1.jpg`,
 ];
-
 function About() {
   const [index, setIndex] = useState(0);
 
